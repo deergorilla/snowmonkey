@@ -1,18 +1,11 @@
 package com.snowmonkey.sample.firebase
 
-import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.widget.EditText
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import android.support.annotation.NonNull
-import android.support.v4.app.FragmentActivity
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.widget.EditText
 import android.widget.TextView
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
 
 
 
@@ -23,8 +16,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mAuthListener: FirebaseAuth.AuthStateListener
     private val email by lazy { findViewById<EditText>(R.id.email_text) }
     private val password by lazy { findViewById<EditText>(R.id.password_text) }
-    val signin = findViewById<TextView>(R.id.signin_text)
-    val signup = findViewById<TextView>(R.id.signup_text)
+    private val signin by lazy { findViewById<TextView>(R.id.signin_text) }
+    private val signup by lazy { findViewById<TextView>(R.id.signup_text) }
 
 
 
